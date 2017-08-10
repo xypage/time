@@ -24,6 +24,7 @@ p {
   text-shadow:0 0 2vw #00c510;
 	font-family: 'LCD';
 	letter-spacing: 2px;
+	white-space: nowrap;
 }
 button {
 	border-radius:5px;
