@@ -38,7 +38,12 @@ function printTime() { //Make it a function so the button can call it
 	};
 	//Same as above but for hours
 
-	document.getElementById("time").innerHTML = 'The time is ' + hour + ":" + minutes + ' ' + morningOrNight;
+	if (window.innerWidth > 500) {
+		document.getElementById("time").innerHTML = 'The time is ' + hour + ":" + minutes + ' ' + morningOrNight;
+	} else {
+		document.getElementById("time").innerHTML = 'The time is <br>' + hour + ":" + minutes + ' ' + morningOrNight;
+	}
+	//makes it wrap for smaller screens
 
 	setTimeout(printTime, 1000)
 };
