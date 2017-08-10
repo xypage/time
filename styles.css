@@ -20,7 +20,7 @@
 }
 p {
   color:#00ff14;
-  font-size:10vw;
+  font-size:8vw;
   text-shadow:0 0 2vw #00c510;
 	font-family: 'LCD';
 	letter-spacing: 2px;
@@ -32,9 +32,4 @@ button {
 	font-size: 1em;
 	padding:5px 10px;
 	margin-bottom:5px;
-}
-@media only screen (min-width: 500px) {
-	br {
-		display:none;
-	}
 }
