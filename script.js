@@ -1,22 +1,14 @@
 let hour = 0,
 morningOrNight = "",
-minutes = 0,
-date = new Date();
+minutes = 0;
 //defines all variables and functions
 
-function printDay() {
+function printDateAndTime() { //Make it a function so the button can call it
+	var date = new Date(),
+	twentyFourHour = date.getHours(),
+	possMinute = date.getMinutes();
 	weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	//make an array to get the weekday not a 0-6 value
-
-	document.getElementById("date").innerHTML = 'Today is ' + weekDays[date.getDay()] + '<br>';
-	//puts in the day value to the array to get the day as a string and has a br tag to put a line in
-
-	setTimeout(printDay, 100000)
-}
-
-function printTime() {
-	let twentyFourHour = date.getHours(),
-	possMinute = date.getMinutes();
 
 	if (twentyFourHour > 12) { //for afternoon
 		 hour = date.getHours() - 12;
@@ -48,6 +40,9 @@ function printTime() {
 	};
 	//Same as above but for hours
 
+	document.getElementById("date").innerHTML = 'Today is ' + weekDays[date.getDay()] + '<br>';
+	//puts in the day value to the array to get the day as a string and has a br tag to put a line in
+
 	if (window.innerWidth > 500) {
 		document.getElementById("time").innerHTML = 'and the time is ' + hour + ":" + minutes + ' ' + morningOrNight;
 	} else {
@@ -55,8 +50,7 @@ function printTime() {
 	}
 	//makes it wrap for smaller screens
 
-	setTimeout(printTime, 1000)
+	setTimeout(printDateAndTime, 1000)
 };
 
-printDay();
-printTime();
+printDateAndTime();
