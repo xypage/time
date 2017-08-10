@@ -44,9 +44,9 @@ function printDateAndTime() { //Make it a function so the button can call it
 	//puts in the day value to the array to get the day as a string and has a br tag to put a line in
 
 	if (window.innerWidth > 500) {
-		document.getElementById("time").innerHTML = 'The time is ' + hour + ":" + minutes + ' ' + morningOrNight;
+		document.getElementById("time").innerHTML = 'and the time is ' + hour + ":" + minutes + ' ' + morningOrNight;
 	} else {
-		document.getElementById("time").innerHTML = 'The time is <br>' + hour + ":" + minutes + ' ' + morningOrNight;
+		document.getElementById("time").innerHTML = 'and the time is <br>' + hour + ":" + minutes + ' ' + morningOrNight;
 	}
 	//makes it wrap for smaller screens
 
